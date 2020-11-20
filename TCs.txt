@@ -1,0 +1,54 @@
+TC001 - Web site is open
+Test Steps: 
+ 1. Go to https://www.amazon.de/.
+Expected Result: 
+ 1. The web site is open and the categories sidebar is shown.
+ 2. Title should be equal "Amazon.de: Günstige Preise für Elektronik & Foto, Filme, Musik, Bücher, Games, Spielzeug & mehr".
+ 
+
+TC002 - Login verification
+Test Steps: 
+ 1. Go to https://www.amazon.de/.
+ 2. Click on "Einloggen" button.
+ 3. Enter email and password.
+ 4. Click "Einlogen".
+Expected Result: 
+ 1. I see that I have to confirm sign in via email.
+ 
+
+ TC003 - Open help for "Alexa-Skills" 
+Test Steps: 
+ 1. Go to https://www.amazon.de/.
+ 2. Scroll down till footer is visible.
+ 3. Select "Kundenservice".
+ 4. Select "Hilfe für digitale Dienste und Geräte.
+ 5. select "Alexa-Funktionen".
+ 6. Select "Alexa Skills".
+ 7. Select "Was sind Alexa Skills?"
+Expected Result: 
+ 1. The item was added tofavorites.
+ 2. I can delete item and the list is empty again.
+ 
+ 
+ TC004 - Search for an item usign search bar
+Test Steps: 
+ 1. Go to https://www.amazon.de/.
+ 2. Type "Tisch" in search bar.
+ 3. Select one of the search results.
+Expected Result: 
+ 1. The details page is open.
+ 2. Price is visible.
+ 3. Description contains text.
+ 
+ 
+ TC005 - Search for an item through categories
+Test Steps: 
+ 1. Go to https://www.amazon.de/.
+ 2. Click on "Amazon Basics".
+ 3. Select "Mehr" -> "Büro".
+ 4. Select one of the search results.
+Expected Result: 
+ 1. The details page is open.
+ 2. Price is visible.
+ 3. Description contains text.
+ 
