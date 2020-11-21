@@ -7,6 +7,7 @@ module.exports = {
     TC001 - Web site is open
     Test Steps: 
     1. Go to https://www.amazon.de/.
+    2. Accept cookies.
     Expected Result: 
     1. The web site is open and the categories sidebar is shown.
     2. Title should be equal "Amazon.de: Günstige Preise für Elektronik & Foto, Filme, Musik, Bücher, Games, Spielzeug & mehr".
@@ -17,6 +18,7 @@ module.exports = {
         browser
             .url('https://www.amazon.de/')
             .waitForElementVisible('body')
+            .click('xpath', '/html/body/div[1]/span/form/div[2]/span[1]/span/input')
             .assert.titleContains('Amazon.de: Günstige Preise für Elektronik & Foto, Filme, Musik, Bücher, Games, Spielzeug & mehr')
             .moveToElement('div#navFooter', 10, 10)
             .isVisible('div#navFooter', (result) => { 
@@ -56,7 +58,7 @@ module.exports = {
    },
 
    /*
-    TC004 - Search for an item usign search bar
+    TC003 - Search for an item usign search bar
     Test Steps: 
     1. Go to https://www.amazon.de/.
     2. Type "Tisch" in search bar.
@@ -71,7 +73,6 @@ module.exports = {
     browser
         .url('https://www.amazon.de/')
         .waitForElementVisible('body') 
-        .click('xpath', '/html/body/div[1]/span/form/div[2]/span[1]/span/input')
         .setValue("input#twotabsearchtextbox","Tisch")
         .click('xpath','/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[3]/div/span/input')
         .waitForElementVisible('xpath','/html/body/div[1]/div[2]/div[1]/div[2]/div/span[3]/div[2]/div[3]/div/span/div/div/div/div/div[2]/h2/a')
@@ -83,7 +84,7 @@ module.exports = {
     },
 
     /*
-    TC005 - Search for an item through categories
+    TC004 - Search for an item through categories
     Test Steps: 
     1. Go to https://www.amazon.de/.
     2. Click on "Amazon Basics".
@@ -97,7 +98,6 @@ module.exports = {
     browser
         .url('https://www.amazon.de/')
         .waitForElementVisible('body') 
-        .click('xpath', '/html/body/div[1]/span/form/div[2]/span[1]/span/input')
         .click('xpath','/html/body/div[1]/header/div/div[4]/div[2]/div[2]/div/a[2]')
         .click('xpath','/html/body/div[1]/div[2]/div/div[2]/div/div/div/div/div[3]/div[2]/div[2]/div[2]/nav/ul/li[22]/button')
         .waitForElementVisible('xpath','/html/body/div[1]/div[2]/div/div[2]/div/div/div/div/div[3]/div[2]/div[2]/div[3]/nav/div/ul/li[6]/a')
